@@ -17,6 +17,7 @@ export default async function Nav() {
           font-size: 11px;
           font-family: var(--font-mono);
           transition: color 0.1s;
+          letter-spacing: 0.03em;
         }
         .nav-link:hover { color: var(--text); }
         .nav-register {
@@ -27,6 +28,11 @@ export default async function Nav() {
           border-radius: 3px;
           color: var(--text-3);
           text-decoration: none;
+          transition: border-color 0.1s, color 0.1s;
+        }
+        .nav-register:hover {
+          border-color: var(--red);
+          color: var(--text);
         }
       `}</style>
 
@@ -64,8 +70,10 @@ export default async function Nav() {
 
         {/* Middle: nav links */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-          <Link href="/feed"       className="nav-link">Feed</Link>
-          <Link href="/experiment" className="nav-link">Experiment</Link>
+          <Link href="/feed"        className="nav-link">Feed</Link>
+          <Link href="/experiment"  className="nav-link">Experiment</Link>
+          <Link href="/methodology" className="nav-link">Methodology</Link>
+          <Link href="/about"       className="nav-link">About</Link>
           {user && <Link href="/dashboard" className="nav-link">Dashboard</Link>}
         </div>
 
