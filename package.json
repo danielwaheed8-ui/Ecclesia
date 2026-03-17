@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "git add -A && git commit -m \"chore: deploy\" && git push && vercel deploy --prod"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.79.0",
